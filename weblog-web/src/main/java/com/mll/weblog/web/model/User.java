@@ -1,7 +1,9 @@
 package com.mll.weblog.web.model;
 
-import com.sun.istack.internal.NotNull;
+
 import lombok.Data;
+
+import javax.validation.constraints.*;
 
 /**
  * @Title: User
