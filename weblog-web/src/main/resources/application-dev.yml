@@ -1,0 +1,5 @@
+# 开启 AspectJ 自动代理
+spring:
+  aop:
+    proxy-target-class: true
+    auto: true
