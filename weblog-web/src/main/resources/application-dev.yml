@@ -1,8 +1,4 @@
-# 开启 AspectJ 自动代理
 spring:
-  aop:
-    proxy-target-class: true
-    auto: true
   datasource:
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
     url: jdbc:p6spy:mysql://10.244.76.198:3307/weblog?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
@@ -17,3 +13,7 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  security:
+    user:
+      name: admin # 登录用户名
+      password: 123456 # 登录密码

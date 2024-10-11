@@ -1,6 +1,7 @@
 package com.mll.weblog.web.controller;
 
 import com.mll.weblog.common.aspect.ApiOperationLog;
+import com.mll.weblog.common.domain.mapper.UserMapper;
 import com.mll.weblog.common.enums.ResponseCodeEnum;
 import com.mll.weblog.common.exception.BizException;
 import com.mll.weblog.common.utils.JsonUtil;
@@ -32,10 +33,10 @@ import java.util.stream.Collectors;
 @Slf4j
 public class TestController {
 
-    @PostMapping("/test")
+    @PostMapping("/admin/test")
     @ApiOperationLog(description = "测试接口")
     @ApiOperation(value = "测试接口")
-    public Response<User> test(@RequestBody @Validated User user) {
+    public Response test(@RequestBody @Validated User user) {
         // 打印入参
         log.info(JsonUtil.toJsonString(user));
 
@@ -46,6 +47,7 @@ public class TestController {
 
         return Response.success(user);
     }
+
 
 
 }
