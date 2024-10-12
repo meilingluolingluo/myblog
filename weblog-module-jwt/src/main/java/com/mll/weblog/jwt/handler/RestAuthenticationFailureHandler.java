@@ -21,11 +21,12 @@ import java.io.IOException;
 
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 15:19
- * @description: 认证失败处理器
- **/
+ * @Title: RestAuthenticationFailureHandler
+ * @Author mll
+ * @Package com.mll.weblog.web.handler
+ * @Date 2024/10/7 18:46
+ * @description: 自定义认证失败处理器
+ */
 @Component
 @Slf4j
 public class RestAuthenticationFailureHandler implements AuthenticationFailureHandler {

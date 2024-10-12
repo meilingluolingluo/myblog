@@ -17,11 +17,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import javax.annotation.Resource;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 16:45
- * @description: 认证功能相关配置
- **/
+ * @Title: JwtAuthenticationSecurityConfig
+ * @Author mll
+ * @Package com.mll.weblog.web.config
+ * @Date 2024/10/9 22:18
+ * @description: 自定义JWT认证功能配置，一个 Spring Security 配置类，
+ * 用于配置 JWT（JSON Web Token）的身份验证机制。
+ * 它继承了 Spring Security 的 SecurityConfigurerAdapter 类，
+ * 用于在 Spring Security 配置中添加自定义的认证过滤器和提供者。
+ * 通过重写 configure() 方法，我们将之前写好过滤器、认证成功、失败处理器，以及加密算法整合到了 httpSecurity 中。
+ */
 @Configuration
 public class JwtAuthenticationSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 

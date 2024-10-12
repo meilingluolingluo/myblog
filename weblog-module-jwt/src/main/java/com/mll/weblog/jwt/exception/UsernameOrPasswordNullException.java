@@ -3,11 +3,12 @@ package com.mll.weblog.jwt.exception;
 import org.springframework.security.core.AuthenticationException;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 17:11
- * @description: 用户名或者密码为空异常
- **/
+ * @Title: UsernameOrPasswordNullException
+ * @Author mll
+ * @Package com.mll.weblog.web.exception
+ * @Date 2024/10/7 18:40
+ * @description: 用户名校验
+ */
 public class UsernameOrPasswordNullException extends AuthenticationException {
     public UsernameOrPasswordNullException(String msg, Throwable cause) {
         super(msg, cause);

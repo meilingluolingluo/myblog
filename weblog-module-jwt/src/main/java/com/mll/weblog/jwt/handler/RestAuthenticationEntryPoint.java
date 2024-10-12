@@ -19,11 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-27 17:27
- * @description: 用户未登录访问受保护的资源
- **/
+ * @Title: RestAuthenticationEntryPoint
+ * @Author mll
+ * @Package com.mll.handler
+ * @Date 2024/10/10 10:54
+ * @description: 处理当用户未登录时，访问受保护的资源的情况
+ */
 @Slf4j
 @Component
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {

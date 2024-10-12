@@ -16,11 +16,12 @@ import java.time.ZoneId;
 import java.util.Base64;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 8:16
- * @description: JWT Token 工具类
- **/
+ * @Title: JwtTokenHelper
+ * @Author mll
+ * @Package cn.mll.weblog.admin.config
+ * @Date 2024/10/7 18:35
+ * @description: JwtTokenHelper 工具类
+ */
 @Component
 public class JwtTokenHelper implements InitializingBean {
 

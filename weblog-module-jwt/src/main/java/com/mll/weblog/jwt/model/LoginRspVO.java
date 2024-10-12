@@ -6,11 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 9:43
- * @description: 用户登录
- **/
+ * @Title: LoginRspVO
+ * @Author mll
+ * @Package com.mll.model
+ * @Date 2024/10/9 22:31
+ * @description: 登录响应参数类VO
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

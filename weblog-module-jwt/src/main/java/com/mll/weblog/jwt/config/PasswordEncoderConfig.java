@@ -6,11 +6,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 9:17
+ * @Title: PasswordEncoderConfig
+ * @Author mll
+ * @Package com.mll.config
+ * @Date 2024/10/7 18:34
  * @description: 密码加密
- **/
+ */
 @Component
 public class PasswordEncoderConfig {
 

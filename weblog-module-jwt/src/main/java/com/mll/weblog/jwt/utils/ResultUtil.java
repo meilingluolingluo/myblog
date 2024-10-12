@@ -11,11 +11,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-04-18 15:05
- * @description: 响参工具
- **/
+ * @Title: ResultUtil
+ * @Author mll
+ * @Package com.mll.weblog.web.utils
+ * @Date 2024/10/7 18:44
+ * @description: ResultUtil返参工具类
+ */
 public class ResultUtil {
 
     /**

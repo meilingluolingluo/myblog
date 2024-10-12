@@ -19,11 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 15:19
- * @description: 认证成功处理器
- **/
+ * @Title: RestAuthenticationSuccessHandler
+ * @Author mll
+ * @Package com.mll.weblog.web.handler
+ * @Date 2024/10/7 18:41
+ * @description: 自定义认证成功处理器
+ */
 @Component
 @Slf4j
 public class RestAuthenticationSuccessHandler implements AuthenticationSuccessHandler {

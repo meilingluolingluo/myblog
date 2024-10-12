@@ -18,9 +18,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * @author: 犬小哈
- * @url: www.quanxiaoha.com
- * @date: 2023-08-24 9:36
  * @description: 用户认证过滤器
  **/
 public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
