@@ -1,12 +1,13 @@
 import Index from '@/pages/frontend/index.vue'
 import Login from '@/pages/admin/login.vue'
 import AdminIndex from '@/pages/admin/index.vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Admin from '@/layouts/admin/admin.vue'
 import AdminArticleList from '@/pages/admin/article-list.vue'
 import AdminCategoryList from '@/pages/admin/category-list.vue'
 import AdminTagList from '@/pages/admin/tag-list.vue'
 import AdminBlogSetting from '@/pages/admin/blog-setting.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Admin from '@/layouts/admin/admin.vue'
+
 // 统一在这里声明所有路由
 const routes = [
     {
@@ -32,7 +33,7 @@ const routes = [
                 path: "/admin/index",
                 component: AdminIndex,
                 meta: {
-                    title: 'Admin 后台首页'
+                    title: '仪表盘'
                 }
             },
             {
@@ -63,7 +64,6 @@ const routes = [
                     title: '博客设置'
                 }
             },
-
         ]
         
     }

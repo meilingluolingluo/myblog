@@ -35,7 +35,7 @@
                     <el-form-item prop="password">
                         <!-- 密码框组件 -->
                         <el-input size="large" type="password" v-model="form.password" placeholder="请输入密码"
-                            :prefix-icon="Lock" clearable show-password/>
+                            :prefix-icon="Lock" clearable show-password />
                     </el-form-item>
                     <el-form-item>
                         <!-- 登录按钮，宽度设置为 100% -->
@@ -54,7 +54,7 @@ import { login } from '@/api/admin/user'
 import { ref, reactive, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { showMessage} from '@/composables/util'
-import { setToken } from '@/composables/auth'
+import { setToken } from '@/composables/cookie'
 
 // 定义响应式的表单对象
 const form = reactive({
@@ -101,7 +101,7 @@ const onSubmit = () => {
         login(form.username, form.password).then((res) => {
             console.log(res)
             // 判断是否成功
-            if (res.success === true) {
+            if (res.success == true) {
                 // 提示登录成功
                 showMessage('登录成功')
 
