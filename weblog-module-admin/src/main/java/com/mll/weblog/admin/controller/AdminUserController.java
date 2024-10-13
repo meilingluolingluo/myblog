@@ -1,5 +1,6 @@
 package com.mll.weblog.admin.controller;
 
+import com.mll.weblog.admin.model.vo.FindUserInfoRspVO;
 import com.mll.weblog.admin.model.vo.UpdateAdminUserPasswordReqVO;
 import com.mll.weblog.admin.service.AdminUserService;
 import com.mll.weblog.common.aspect.ApiOperationLog;
@@ -34,4 +35,11 @@ public class AdminUserController {
     public Response<UpdateAdminUserPasswordReqVO> updatePassword(@RequestBody @Validated UpdateAdminUserPasswordReqVO updateAdminUserPasswordReqVO) {
         return userService.updatePassword(updateAdminUserPasswordReqVO);
     }
+    @PostMapping("/user/info")
+    @ApiOperation(value = "获取用户信息")
+    @ApiOperationLog(description = "获取用户信息")
+    public Response<FindUserInfoRspVO> findUserInfo() {
+        return userService.findUserInfo();
+    }
+
 }

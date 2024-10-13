@@ -1,5 +1,6 @@
 package com.mll.weblog.admin.service;
 
+import com.mll.weblog.admin.model.vo.FindUserInfoRspVO;
 import com.mll.weblog.admin.model.vo.UpdateAdminUserPasswordReqVO;
 import com.mll.weblog.common.utils.Response;
 
@@ -17,5 +18,10 @@ public interface AdminUserService {
      * @return
      */
     Response<UpdateAdminUserPasswordReqVO> updatePassword(UpdateAdminUserPasswordReqVO updateAdminUserPasswordReqVO);
+    /**
+     * 获取当前登录用户信息
+     * @return
+     */
+    Response<FindUserInfoRspVO> findUserInfo();
 }
 
