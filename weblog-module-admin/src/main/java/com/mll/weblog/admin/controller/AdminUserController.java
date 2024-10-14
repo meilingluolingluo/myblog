@@ -1,7 +1,7 @@
 package com.mll.weblog.admin.controller;
 
-import com.mll.weblog.admin.model.vo.FindUserInfoRspVO;
-import com.mll.weblog.admin.model.vo.UpdateAdminUserPasswordReqVO;
+import com.mll.weblog.admin.model.vo.user.FindUserInfoRspVO;
+import com.mll.weblog.admin.model.vo.user.UpdateAdminUserPasswordReqVO;
 import com.mll.weblog.admin.service.AdminUserService;
 import com.mll.weblog.common.aspect.ApiOperationLog;
 import com.mll.weblog.common.utils.Response;
@@ -41,5 +41,6 @@ public class AdminUserController {
     public Response<FindUserInfoRspVO> findUserInfo() {
         return userService.findUserInfo();
     }
+
 
 }

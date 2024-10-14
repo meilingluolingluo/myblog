@@ -1,7 +1,7 @@
 package com.mll.weblog.admin.service.impl;
 
-import com.mll.weblog.admin.model.vo.FindUserInfoRspVO;
-import com.mll.weblog.admin.model.vo.UpdateAdminUserPasswordReqVO;
+import com.mll.weblog.admin.model.vo.user.FindUserInfoRspVO;
+import com.mll.weblog.admin.model.vo.user.UpdateAdminUserPasswordReqVO;
 import com.mll.weblog.admin.service.AdminUserService;
 import com.mll.weblog.common.domain.mapper.UserMapper;
 import com.mll.weblog.common.enums.ResponseCodeEnum;
