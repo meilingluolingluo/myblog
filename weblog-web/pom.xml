@@ -9,7 +9,6 @@
         <version>${revision}</version>
     </parent>
 
-    <groupId>com.mll</groupId>
     <artifactId>weblog-web</artifactId>
     <name>weblog-web</name>
     <description>weblog-web (入口项目，负责博客前台展示相关功能，打包也放在这个模块负责)</description>
@@ -22,16 +21,21 @@
         <dependency>
             <groupId>com.mll</groupId>
             <artifactId>weblog-module-admin</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- 验证 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- knife4j -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- 免写冗余的 Java 样板式代码 -->
