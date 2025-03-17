@@ -8,12 +8,11 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * @Title: FindCategoryPageListRspVO
- * @Author mll
- * @Package com.mll.weblog.admin.model.vo.category
- * @Date 2024/10/14 18:41
- * @description: 分类查询出参
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-15 14:07
+ * @description: 分类分页
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +33,10 @@ public class FindCategoryPageListRspVO {
      * 创建时间
      */
     private LocalDateTime createTime;
+
+    /**
+     * 文章总数
+     */
+    private Integer articlesTotal;
 
 }

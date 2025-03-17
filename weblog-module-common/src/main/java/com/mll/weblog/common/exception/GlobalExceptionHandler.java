@@ -10,17 +10,15 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 /**
- * @Title: GlobalExceptionHandler
- * @Author mll
- * @Package com.mll.weblog.common.exception
- * @Date 2024/10/5 15:38
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-15 10:14
  * @description: 全局异常处理
- */
+ **/
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
@@ -72,6 +70,11 @@ public class GlobalExceptionHandler {
         return Response.fail(errorCode, errorMessage);
     }
 
+    @ExceptionHandler({ AccessDeniedException.class })
+    public void throwAccessDeniedException(AccessDeniedException e) throws AccessDeniedException {
+        log.info("============= 捕获到 AccessDeniedException");
+        throw e;
+    }
 
     /**
      * 其他类型异常
@@ -85,12 +88,4 @@ public class GlobalExceptionHandler {
         log.error("{} request error, ", request.getRequestURI(), e);
         return Response.fail(ResponseCodeEnum.SYSTEM_ERROR);
     }
-
-    @ExceptionHandler({ AccessDeniedException.class })
-    public void throwAccessDeniedException(AccessDeniedException e) throws AccessDeniedException {
-        // 捕获到鉴权失败异常，主动抛出，交给 RestAccessDeniedHandler 去处理
-        log.info("============= 捕获到 AccessDeniedException");
-        throw e;
-    }
-
 }

@@ -3,12 +3,11 @@ package com.mll.weblog.common.model;
 import lombok.Data;
 
 /**
- * @Title: BasePageQuery
- * @Author mll
- * @Package com.mll.weblog.common
- * @Date 2024/10/14 16:42
- * @description: 分页请求基础类
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-19 8:54
+ * @description: TODO
+ **/
 @Data
 public class BasePageQuery {
     /**
@@ -20,4 +19,3 @@ public class BasePageQuery {
      */
     private Long size = 10L;
 }
-

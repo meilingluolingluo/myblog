@@ -8,13 +8,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-/**
- * @Title: UserRoleDO
- * @Author  mll
- * @Package com.mll.weblog.common.domain.dos
- * @Date  2024/10/12 10:34
- * @description: 用户角色类
-*/
 @Data
 @Builder
 @TableName("t_user_role")

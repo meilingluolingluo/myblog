@@ -5,16 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 /**
- * @Title: DeleteCategoryReqVO
- * @Author mll
- * @Package com.mll.weblog.admin.model.vo.category
- * @Date 2024/10/14 18:42
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-15 14:07
  * @description: 删除分类
- */
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,4 +27,3 @@ public class DeleteCategoryReqVO {
     private Long id;
 
 }
-

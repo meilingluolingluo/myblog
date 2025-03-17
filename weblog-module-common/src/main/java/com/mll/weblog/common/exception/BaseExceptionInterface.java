@@ -1,12 +1,11 @@
 package com.mll.weblog.common.exception;
 
 /**
- * @Title: BaseExceptionTnterface
- * @Author mll
- * @Package com.mll.weblog.common.exception
- * @Date 2024/10/5 11:36
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-15 9:54
  * @description: 通用异常接口
- */
+ **/
 public interface BaseExceptionInterface {
     String getErrorCode();
 

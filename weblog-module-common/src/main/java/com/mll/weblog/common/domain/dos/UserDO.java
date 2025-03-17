@@ -8,15 +8,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
- * @Title: UserDo
- * @Author mll
- * @Package com.mll.weblog.common.domain.dos
- * @Date 2024/10/10 19:50
- * @description: UserDo
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-22 17:01
+ * @description: 用户
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -31,9 +30,9 @@ public class UserDO {
 
     private String password;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     private Boolean isDeleted;
 }

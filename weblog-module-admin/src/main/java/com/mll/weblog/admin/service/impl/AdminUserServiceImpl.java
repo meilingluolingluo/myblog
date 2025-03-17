@@ -13,12 +13,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
- * @Title: AdminUseerServiceImplp
- * @Author mll
- * @Package com.mll.weblog.admin.service.impl
- * @Date 2024/10/13 21:00
- * @description: 管理员实现类
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-15 14:03
+ * @description: TODO
+ **/
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
 
@@ -33,7 +32,7 @@ public class AdminUserServiceImpl implements AdminUserService {
      * @return
      */
     @Override
-    public Response<UpdateAdminUserPasswordReqVO> updatePassword(UpdateAdminUserPasswordReqVO updateAdminUserPasswordReqVO) {
+    public Response updatePassword(UpdateAdminUserPasswordReqVO updateAdminUserPasswordReqVO) {
         // 拿到用户名、密码
         String username = updateAdminUserPasswordReqVO.getUsername();
         String password = updateAdminUserPasswordReqVO.getPassword();
@@ -46,12 +45,13 @@ public class AdminUserServiceImpl implements AdminUserService {
 
         return count == 1 ? Response.success() : Response.fail(ResponseCodeEnum.USERNAME_NOT_FOUND);
     }
+
     /**
      * 获取当前登录用户信息
      * @return
      */
     @Override
-    public Response<FindUserInfoRspVO> findUserInfo() {
+    public Response findUserInfo() {
         // 获取存储在 ThreadLocal 中的用户信息
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         // 拿到用户名

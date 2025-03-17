@@ -6,12 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Title: SelectRspVO
- * @Author  mll
- * @Package com.mll.weblog.common.model.vo
- * @Date  2024/10/14 20:38
- * @description: 下拉列表实体类
-*/
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2023/9/20 16:02
+ * @description: TODO
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

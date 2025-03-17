@@ -7,12 +7,11 @@ import com.mll.weblog.common.domain.dos.UserRoleDO;
 import java.util.List;
 
 /**
- * @Title: UserRoleMapper
- * @Author  mll
- * @Package com.mll.weblog.common.domain.mapper
- * @Date  2024/10/12 10:35
- * @description: 用户角色接口
-*/
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-22 17:06
+ * @description: TODO
+ **/
 public interface UserRoleMapper extends BaseMapper<UserRoleDO> {
     /**
      * 根据用户名查询

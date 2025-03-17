@@ -6,16 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.*;
 
 /**
- * @Title: UpdateAdminUserPasswordReqVO
- * @Author mll
- * @Package com.mll.weblog.admin.model.vo
- * @Date 2024/10/13 20:53
- * @description: 修改密码入参实体类
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-15 14:07
+ * @description: TODO
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

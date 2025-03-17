@@ -8,27 +8,26 @@ import com.mll.weblog.common.domain.dos.UserDO;
 import java.time.LocalDateTime;
 
 /**
- * @Title: UserMapper
- * @Author  mll
- * @Package com.mll.weblog.common.domain.mapper
- * @Date  2024/10/10 19:51
- * @description: UserMapper
-*/
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-22 17:06
+ * @description: TODO
+ **/
 public interface UserMapper extends BaseMapper<UserDO> {
     default UserDO findByUsername(String username) {
         LambdaQueryWrapper<UserDO> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(UserDO::getUsername, username);
         return selectOne(wrapper);
     }
+
     default int updatePasswordByUsername(String username, String password) {
-        LambdaUpdateWrapper<UserDO> wrapper = new LambdaUpdateWrapper<>();
-        // 设置要更新的字段
-        wrapper.set(UserDO::getPassword, password);
-        wrapper.set(UserDO::getUpdateTime, LocalDateTime.now());
-        // 更新条件
-        wrapper.eq(UserDO::getUsername, username);
+         LambdaUpdateWrapper<UserDO> wrapper = new LambdaUpdateWrapper<>();
+         // 设置要更新的字段
+         wrapper.set(UserDO::getPassword, password);
+         wrapper.set(UserDO::getUpdateTime, LocalDateTime.now());
+         // 更新条件
+         wrapper.eq(UserDO::getUsername, username);
 
-        return update(null, wrapper);
+         return update(null, wrapper);
     }
-
 }

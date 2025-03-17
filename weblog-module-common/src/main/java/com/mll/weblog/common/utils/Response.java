@@ -7,12 +7,11 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Title: Response
- * @Author mll
- * @Package com.mll.weblog.common.utils
- * @Date 2024/10/5 11:17
- * @description: 响应工具参数类
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-11 19:50
+ * @description: 响应参数工具类
+ **/
 @Data
 public class Response<T> implements Serializable {
 
@@ -58,6 +57,7 @@ public class Response<T> implements Serializable {
         response.setMessage(errorMessage);
         return response;
     }
+
     public static <T> Response<T> fail(BizException bizException) {
         Response<T> response = new Response<>();
         response.setSuccess(false);
@@ -65,6 +65,7 @@ public class Response<T> implements Serializable {
         response.setMessage(bizException.getErrorMessage());
         return response;
     }
+
     public static <T> Response<T> fail(BaseExceptionInterface baseExceptionInterface) {
         Response<T> response = new Response<>();
         response.setSuccess(false);

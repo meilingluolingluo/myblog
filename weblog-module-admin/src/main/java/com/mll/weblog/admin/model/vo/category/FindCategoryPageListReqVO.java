@@ -3,16 +3,18 @@ package com.mll.weblog.admin.model.vo.category;
 import com.mll.weblog.common.model.BasePageQuery;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
+import org.hibernate.validator.constraints.Length;
 
+import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
- * @Title: FindCategoryPageListReqVO
- * @Author mll
- * @Package com.mll.weblog.admin.model.vo.category
- * @Date 2024/10/14 17:10
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-09-15 14:07
  * @description: 分类分页
- */
+ **/
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
@@ -37,4 +39,3 @@ public class FindCategoryPageListReqVO extends BasePageQuery {
     private LocalDate endDate;
 
 }
-

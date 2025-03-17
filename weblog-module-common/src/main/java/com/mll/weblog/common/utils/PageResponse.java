@@ -2,19 +2,16 @@ package com.mll.weblog.common.utils;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.util.List;
 import java.util.Objects;
 
 /**
- * @Title: PageResponse
- * @Author mll
- * @Package com.mll.weblog.common.utils
- * @Date 2024/10/14 16:41
- * @description: 分页响应类
- */
-@EqualsAndHashCode(callSuper = true)
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-11 19:50
+ * @description: 分页响应参数工具类
+ **/
 @Data
 public class PageResponse<T> extends Response<List<T>> {
 
@@ -52,6 +49,19 @@ public class PageResponse<T> extends Response<List<T>> {
         response.setSize(Objects.isNull(page) ? 10L : page.getSize());
         response.setPages(Objects.isNull(page) ? 0L : page.getPages());
         response.setTotal(Objects.isNull(page) ? 0L : page.getTotal());
+        response.setData(data);
+        return response;
+    }
+
+    public static <T> PageResponse<T> success(long total, long current, long size, List<T> data) {
+        PageResponse<T> response = new PageResponse<>();
+        response.setSuccess(true);
+        response.setCurrent(current);
+        response.setSize(size);
+        // 计算总页数
+        int pages = (int) Math.ceil((double) total / size);
+        response.setPages(pages);
+        response.setTotal(total);
         response.setData(data);
         return response;
     }

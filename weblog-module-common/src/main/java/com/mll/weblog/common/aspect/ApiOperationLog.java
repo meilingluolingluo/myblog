@@ -2,9 +2,6 @@ package com.mll.weblog.common.aspect;
 
 import java.lang.annotation.*;
 
-/**
- * @author mll
- */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Documented
@@ -17,3 +14,4 @@ public @interface ApiOperationLog {
     String description() default "";
 
 }
+

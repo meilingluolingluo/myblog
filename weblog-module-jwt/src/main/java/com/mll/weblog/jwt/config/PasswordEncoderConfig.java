@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Title: PasswordEncoderConfig
  * @Author mll
- * @Package com.mll.config
+ * @Package com.mll.search.config
  * @Date 2024/10/7 18:34
  * @description: 密码加密
  */

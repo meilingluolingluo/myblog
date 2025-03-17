@@ -4,12 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Title: BizException
- * @Author mll
- * @Package com.mll.weblog.common.exception
- * @Date 2024/10/5 15:13
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-15 9:52
  * @description: 业务异常
- */
+ **/
 @Getter
 @Setter
 public class BizException extends RuntimeException {

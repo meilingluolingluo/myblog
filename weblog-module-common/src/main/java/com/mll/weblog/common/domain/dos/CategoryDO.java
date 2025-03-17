@@ -11,12 +11,11 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * @Title: CategoryDO
- * @Author mll
- * @Package com.mll.weblog.common.domain.dos
- * @Date 2024/10/14 15:55
- * @description: 文章类别类
- */
+ * @author: mll
+ * @url: www.mll.com
+ * @date: 2024-08-22 17:01
+ * @description: 分类
+ **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +33,6 @@ public class CategoryDO {
     private LocalDateTime updateTime;
 
     private Boolean isDeleted;
-}
 
+    private Integer articlesTotal;
+}
