@@ -18,7 +18,10 @@ target/
 *.iws
 *.iml
 *.ipr
-
+# 忽略 application.yml 文件
+src/main/resources/application-prod.yml
+src/main/resources/application-dev.yml
+src/main/resources/application.yml
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -31,3 +34,4 @@ build/
 
 ### VS Code ###
 .vscode/
+.env
