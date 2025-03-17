@@ -10,7 +10,7 @@ import java.util.List;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-08-22 17:06
- * @description: TODO
+ * 
  **/
 public interface UserRoleMapper extends BaseMapper<UserRoleDO> {
     /**

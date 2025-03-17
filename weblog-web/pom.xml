@@ -50,7 +50,40 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <!-- Markdown 解析 -->
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark-ext-gfm-tables</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark-ext-heading-anchor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark-ext-image-attributes</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.commonmark</groupId>
+            <artifactId>commonmark-ext-task-list-items</artifactId>
+        </dependency>
+        <!-- <dependency> -->
+        <!--     <groupId>fr.brouillard.oss</groupId> -->
+        <!--     <artifactId>commonmark-ext-notifications</artifactId> -->
+        <!-- </dependency> -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.boot</groupId> -->
+        <!--     <artifactId>spring-boot-starter-json</artifactId> -->
+        <!-- </dependency> -->
+        <!-- 敏感词过滤 -->
+        <dependency>
+            <groupId>io.github.toolgood</groupId>
+            <artifactId>toolgood-words</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -59,6 +92,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

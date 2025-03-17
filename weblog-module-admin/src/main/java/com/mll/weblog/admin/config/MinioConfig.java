@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-05-11 8:49
- * @description: TODO
+ * 
  **/
 @Configuration
 public class MinioConfig {

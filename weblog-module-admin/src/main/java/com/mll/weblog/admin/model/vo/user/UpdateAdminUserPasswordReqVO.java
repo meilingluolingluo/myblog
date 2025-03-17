@@ -6,13 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.validation.constraints.*;
+import javax.validation.constraints.*;
 
 /**
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-09-15 14:07
- * @description: TODO
+ * 
  **/
 @Data
 @AllArgsConstructor

@@ -3,7 +3,7 @@ package com.mll.weblog.search.index;
 /**
  * @author: mll
  * @url: www.mll.com
- * @date: 2023/11/27 13:57
+ * @date: 2024/11/27 13:57
  * @description: 文章索引
  **/
 public interface ArticleIndex {

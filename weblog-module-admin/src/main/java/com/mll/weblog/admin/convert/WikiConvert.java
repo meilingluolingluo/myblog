@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 /**
  * @author: mll
  * @url: www.mll.com
- * @date: 2023/10/8 14:57
+ * @date: 2024/10/8 14:57
  * @description: 知识库实体类转换
  **/
 @Mapper

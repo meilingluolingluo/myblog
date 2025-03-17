@@ -2,6 +2,7 @@ package com.mll.weblog.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -12,14 +13,14 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 /**
- * @Title: Knife4jConfig
- * @Author mll
- * @Package com.mll.weblog.web.config
- * @Date 2024/10/5 17:14
- * @description: Knife4j配置
- */
+ * @author: 
+ * @url: www.mll.com
+ * @date: 2024-08-16 7:53
+ * @description: Knife4j 配置
+ **/
 @Configuration
 @EnableSwagger2WebMvc
+@Profile("dev") // 只在 dev 环境中开启
 public class Knife4jConfig {
 
     @Bean("webApi")
@@ -45,7 +46,7 @@ public class Knife4jConfig {
                 .title("Weblog 博客前台接口文档") // 标题
                 .description("Weblog 是一款由 Spring Boot + Vue 3.2 + Vite 4.3 开发的前后端分离博客。") // 描述
                 .termsOfServiceUrl("https://www.mll.com/") // API 服务条款
-                .contact(new Contact("mll", "https://www.mll.com", "mll@qq.com")) // 联系人
+                .contact(new Contact("", "https://www.mll.com", "871361652@qq.com")) // 联系人
                 .version("1.0") // 版本号
                 .build();
     }

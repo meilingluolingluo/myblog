@@ -10,7 +10,7 @@ import java.util.concurrent.Executor;
 /**
  * @author: mll
  * @url: www.mll.com
- * @date: 2023/11/9 10:47
+ * @date: 2024/11/9 10:47
  * @description: 线程池配置
  **/
 @Configuration

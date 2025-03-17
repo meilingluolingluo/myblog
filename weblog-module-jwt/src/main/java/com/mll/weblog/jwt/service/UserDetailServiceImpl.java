@@ -1,21 +1,19 @@
 package com.mll.weblog.jwt.service;
 
 
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.mll.weblog.common.domain.dos.UserDO;
 import com.mll.weblog.common.domain.dos.UserRoleDO;
 import com.mll.weblog.common.domain.mapper.UserMapper;
 import com.mll.weblog.common.domain.mapper.UserRoleMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;

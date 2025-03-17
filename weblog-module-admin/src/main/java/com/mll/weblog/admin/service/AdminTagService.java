@@ -11,7 +11,7 @@ import com.mll.weblog.common.utils.Response;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-09-15 14:03
- * @description: TODO
+ * 
  **/
 public interface AdminTagService {
 

@@ -6,7 +6,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.0</version>
+        <!-- 将 Spring Boot 的版本号切换成 2.6 版本 -->
+        <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -15,17 +16,22 @@
     <version>${revision}</version>
     <name>weblog-springboot</name>
     <!-- 项目描述 -->
-    <description>前后端分离博客</description>
+    <description>前后端分离博客 Weblog By 犬小哈</description>
 
     <!-- 多模块项目父工程打包模式必须指定为 pom -->
     <packaging>pom</packaging>
 
     <!-- 子模块管理 -->
     <modules>
+        <!-- 入口模块 -->
         <module>weblog-web</module>
+        <!-- 管理后台 -->
         <module>weblog-module-admin</module>
+        <!-- 通用模块 -->
         <module>weblog-module-common</module>
+        <!-- JWT 模块 -->
         <module>weblog-module-jwt</module>
+        <!-- 站内搜索模块 -->
         <module>weblog-module-search</module>
     </modules>
 
@@ -34,19 +40,19 @@
     <properties>
         <!-- 项目版本号 -->
         <revision>0.0.1-SNAPSHOT</revision>
-        <java.version>21</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Maven 相关 -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
         <!-- 依赖包版本 -->
-        <lombok.version>1.18.30</lombok.version>
+        <lombok.version>1.18.28</lombok.version>
         <guava.version>31.1-jre</guava.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <jackson.version>2.15.2</jackson.version>
         <knife4j.version>4.3.0</knife4j.version>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <p6spy.version>3.9.1</p6spy.version>
         <jjwt.version>0.11.2</jjwt.version>
         <minio.version>8.2.1</minio.version>
@@ -121,14 +127,10 @@
             <!-- Mybatis Plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-jsqlparser</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>p6spy</groupId>
                 <artifactId>p6spy</artifactId>
@@ -258,9 +260,31 @@
                         </excludes>
                     </configuration>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source> <!-- 根据你的 JDK 版本进行调整 -->
+                        <target>${java.version}</target> <!-- 根据你的 JDK 版本进行调整 -->
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.mapstruct</groupId>
+                                <artifactId>mapstruct-processor</artifactId>
+                                <version>${mapstruct.version}</version> <!-- 使用时请检查最新版本 -->
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
     <!-- 使用阿里云的 Maven 仓库源，提升包下载速度 -->
     <repositories>
         <repository>

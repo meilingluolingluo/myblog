@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-05-11 8:49
- * @description: TODO
+ * 
  **/
 @ConfigurationProperties(prefix = "minio")
 @Component

@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * @author: mll
  * @url: www.mll.com
- * @date: 2023/11/13 11:22
+ * @date: 2024/11/13 11:22
  * @description: 全局静态变量
  **/
 public interface Constants {

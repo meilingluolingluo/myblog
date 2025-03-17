@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-08-22 17:06
- * @description: TODO
+ * 
  **/
 public interface UserMapper extends BaseMapper<UserDO> {
     default UserDO findByUsername(String username) {

@@ -14,7 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import jakarta.annotation.Resource;
+import javax.annotation.Resource;
 
 /**
  * @Title: JwtAuthenticationSecurityConfig
@@ -30,15 +30,19 @@ import jakarta.annotation.Resource;
 @Configuration
 public class JwtAuthenticationSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 
+    @Autowired
     @Resource
     private RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
 
+    @Autowired
     @Resource
     private RestAuthenticationFailureHandler restAuthenticationFailureHandler;
 
+    @Autowired
     @Resource
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
     @Resource
     private UserDetailsService userDetailsService;
 

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-09-15 14:03
- * @description: TODO
+ * 
  **/
 @Service
 public class AdminBlogSettingsServiceImpl extends ServiceImpl<BlogSettingsMapper, BlogSettingsDO> implements AdminBlogSettingsService {

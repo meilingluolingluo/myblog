@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * @author: mll
  * @url: www.mll.com
- * @date: 2023/12/5 15:10
+ * @date: 2024/12/5 15:10
  * @description: 初始化 lucene 索引
  **/
 @Component

@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModel;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 

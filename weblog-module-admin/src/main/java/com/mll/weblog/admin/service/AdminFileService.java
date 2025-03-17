@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author: mll
  * @url: www.mll.com
  * @date: 2024-09-15 14:03
- * @description: TODO
+ * 
  **/
 public interface AdminFileService {
     /**

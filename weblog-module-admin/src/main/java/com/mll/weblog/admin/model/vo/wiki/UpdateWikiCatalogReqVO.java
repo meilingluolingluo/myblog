@@ -6,8 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
