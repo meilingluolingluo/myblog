@@ -5,6 +5,8 @@ import CategoryArticleList from '@/pages/frontend/category-article-list.vue'
 import TagList from '@/pages/frontend/tag-list.vue'
 import TagArticleList from '@/pages/frontend/tag-article-list.vue'
 import ArticleDetail from '@/pages/frontend/article-detail.vue'
+import WikiList from '@/pages/frontend/wiki-list.vue'
+import WikiDetail from '@/pages/frontend/wiki-detail.vue'
 import NotFound from '@/pages/frontend/404.vue'
 import Login from '@/pages/admin/login.vue'
 import AdminIndex from '@/pages/admin/index.vue'
@@ -12,6 +14,8 @@ import AdminArticleList from '@/pages/admin/article-list.vue'
 import AdminCategoryList from '@/pages/admin/category-list.vue'
 import AdminTagList from '@/pages/admin/tag-list.vue'
 import AdminBlogSettings from '@/pages/admin/blog-settings.vue'
+import AdminWikiList from '@/pages/admin/wiki-list.vue'
+import AdminCommentList from '@/pages/admin/comment-list.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Admin from '@/layouts/admin/admin.vue'
 
@@ -64,6 +68,20 @@ const routes = [
         component: ArticleDetail,
         meta: { // meta 信息
             title: 'Weblog 详情页'
+        }
+    },
+    {
+        path: '/wiki/list', // 知识库
+        component: WikiList,
+        meta: {
+            title: '知识库'
+        }
+    },
+    {
+        path: '/wiki/:wikiId', // 知识库详情页
+        component: WikiDetail,
+        meta: {
+            title: '知识库详情'
         }
     },
     {
@@ -121,6 +139,20 @@ const routes = [
                     title: '博客设置'
                 }
             },
+            {
+                path: "/admin/wiki/list",
+                component: AdminWikiList,
+                meta: {
+                    title: '知识库管理'
+                }
+            },
+            {
+                path: "/admin/comment/list",
+                component: AdminCommentList,
+                meta: {
+                    title: '评论管理'
+                }
+            },
         ]
         
     }
@@ -132,6 +164,10 @@ const router = createRouter({
     history: createWebHashHistory(),
     // routes: routes 的缩写
     routes, 
+    // 每次切换路后，页面滚动到顶部
+    scrollBehavior() {
+        return { top: 0 }
+    }
 })
 
 // 暴露出去

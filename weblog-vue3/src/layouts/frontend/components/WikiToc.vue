@@ -1,19 +1,11 @@
 <template>
     <!-- text-sm/[30px] 表示文字小号，行高为 30px -->
     <div v-if="titles && titles.length > 0"
-        class="sticky top-[5.5rem] text-sm/[30px] w-full p-5 mb-3 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+        class="sticky text-sm/[30px] w-full mb-3 transition-all"
+        :class="[currScrollY > 0 ? 'top-0' : 'top-[5.5rem]']"
+        >
         <!-- 目录标题 -->
-        <h2 class="flex items-center mb-2 font-bold text-gray-900 uppercase dark:text-white">
-            <!-- 目录图标 -->
-            <svg t="1699441758495" class="icon w-3.5 h-3.5 mr-2" viewBox="0 0 1024 1024" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" p-id="4043" width="200" height="200">
-                <path
-                    d="M857.6 25.6a76.8 76.8 0 0 1 76.8 76.8v819.2a76.8 76.8 0 0 1-76.8 76.8H166.4a76.8 76.8 0 0 1-76.8-76.8V102.4a76.8 76.8 0 0 1 76.8-76.8h691.2z m-102.4 678.4H473.6l-2.2528 0.064a38.4 38.4 0 0 0 0 76.672L473.6 780.8h281.6l2.2528-0.064a38.4 38.4 0 0 0 0-76.672L755.2 704z m0-230.4H473.6l-2.2528 0.064a38.4 38.4 0 0 0 0 76.672L473.6 550.4h281.6l2.2528-0.064a38.4 38.4 0 0 0 0-76.672L755.2 473.6z m0-230.4H473.6l-2.2528 0.064a38.4 38.4 0 0 0 0 76.672L473.6 320h281.6l2.2528-0.064a38.4 38.4 0 0 0 0-76.672L755.2 243.2z"
-                    fill="#6B57FE" p-id="4044"></path>
-                <path
-                    d="M281.6 691.2a51.2 51.2 0 1 1 0 102.4 51.2 51.2 0 0 1 0-102.4z m0-230.4a51.2 51.2 0 1 1 0 102.4 51.2 51.2 0 0 1 0-102.4z m0-230.4a51.2 51.2 0 1 1 0 102.4 51.2 51.2 0 0 1 0-102.4z"
-                    fill="#FFBA00" p-id="4045"></path>
-            </svg>
+        <h2 class="flex items-center mb-2 font-bold text-gray-900 uppercase dark:text-gray-400">
             文章目录
         </h2>
         <div class="toc-wrapper" :class="[isDark ? 'dark' : '']">
@@ -78,10 +70,13 @@ onMounted(() => {
 
 // 记录当前被选中的标题下标
 const activeHeadingIndex = ref(-1)
+// 当前 Y 轴滚动的偏移量
+const currScrollY = ref(0)
 // 处理滚动事件
 function handleContentScroll() {
     // 当前的滚动位置
     let scrollY = window.scrollY
+    currScrollY.value = scrollY
     // 循环目录
     titles.value.forEach(title => {
         // 获取每个标题的 offset

@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-    url: jdbc:p6spy:mysql://192.168.1.103:3307/weblog2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:p6spy:mysql://192.168.1.103:3306/weblog2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
     password: 123456
     hikari:
@@ -24,7 +24,7 @@ spring:
 minio:
   endpoint: http://192.168.1.103:9000
   accessKey: mll
-  secretKey: mll
+  secretKey: meilingluo
   bucketName: weblog
 
 #=================================================================
