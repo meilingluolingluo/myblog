@@ -1,4 +1,3 @@
-```markdown
 # MyBlog
 
 ## 项目介绍
