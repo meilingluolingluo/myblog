@@ -12,7 +12,7 @@
                 <el-form-item label="作者名" prop="author">
                     <el-input v-model="form.author" clearable />
                 </el-form-item>
-                <el-form-item label="博客 LOGO" prop="logo">
+                <el-form-item label="博客 LOGO (<1M)" prop="logo">
                     <el-upload class="avatar-uploader" action="#" :on-change="handleLogoChange" :auto-upload="false"
                         :show-file-list="false">
                         <img v-if="form.logo" :src="form.logo" class="avatar" />
@@ -21,7 +21,7 @@
                         </el-icon>
                     </el-upload>
                 </el-form-item>
-                <el-form-item label="作者头像" prop="avatar">
+                <el-form-item label="作者头像 (<1M)" prop="avatar">
                     <el-upload class="avatar-uploader" action="#" :on-change="handleAvatarChange" :auto-upload="false"
                         :show-file-list="false">
                         <img v-if="form.avatar" :src="form.avatar" class="avatar" />

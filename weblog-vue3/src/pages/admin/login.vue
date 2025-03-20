@@ -1,17 +1,8 @@
 <template>
     <!-- 使用 grid 网格布局，并指定列数为 2，高度占满全屏 -->
-    <div class="grid grid-cols-2 h-screen">
+    <div class="grid grid-cols-1 h-screen">
         <!-- 默认占两列，order 用于指定排列顺序，md 用于适配非移动端（PC 端） -->
-        <div class="col-span-2 order-2 p-10 md:col-span-1 md:order-1 bg-slate-900">
-            <!-- 指定为 flex 布局，并设置为屏幕垂直水平居中，高度为 100% -->
-            <div
-                class="flex justify-center items-center h-full flex-col animate__animated animate__bounceInLeft animate__fast">
-                <h2 class="font-bold text-4xl mb-7 text-white">Weblog 博客登录</h2>
-                <p class="text-white">一款由 Spring Boot + Mybaits Plus + Vue 3.2 + Vite 4 开发的前后端分离博客。</p>
-                <!-- 指定图片宽度为父级元素的 1/2 -->
-                <img src="@/assets/developer.png" class="w-1/2">
-            </div>
-        </div>
+
         <div class="flex flex-col col-span-2 order-1 md:col-span-1 md:order-2 bg-white dark:bg-gray-800">
 
             <!-- 黑夜白天开关 -->

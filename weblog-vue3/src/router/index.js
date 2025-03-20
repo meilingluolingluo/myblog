@@ -25,49 +25,49 @@ const routes = [
         path: '/', // 路由地址，首页
         component: Index, // 对应组件
         meta: { // meta 信息
-            title: 'Weblog 首页' // 页面标题
+            title: 'myblog 首页' // 页面标题
         }
     },
     {
         path: '/archive/list', // 归档页
         component: ArchiveList,
         meta: { // meta 信息
-            title: 'Weblog 归档页'
+            title: 'myblog 归档页'
         }
     },
     {
         path: '/category/list', // 分类列表页
         component: CategoryList,
         meta: { // meta 信息
-            title: 'Weblog 分类列表页'
+            title: 'myblog 分类列表页'
         }
     },
     {
         path: '/category/article/list', // 分类文章页
         component: CategoryArticleList,
         meta: { // meta 信息
-            title: 'Weblog 分类文章页'
+            title: 'myblog 分类文章页'
         }
     },
     {
         path: '/tag/list', // 标签列表页
         component: TagList,
         meta: { // meta 信息
-            title: 'Weblog 标签列表页'
+            title: 'mylog 标签列表页'
         }
     },
     {
         path: '/tag/article/list', // 标签列表页
         component: TagArticleList,
         meta: { // meta 信息
-            title: 'Weblog 标签文章页'
+            title: 'mylog 标签文章页'
         }
     },
     {
         path: '/article/:articleId', // 文章详情页
         component: ArticleDetail,
         meta: { // meta 信息
-            title: 'Weblog 详情页'
+            title: 'mylog 详情页'
         }
     },
     {
@@ -88,7 +88,7 @@ const routes = [
         path: '/login', // 登录页
         component: Login,
         meta: {
-            title: 'Weblog 登录页'
+            title: 'mylog 登录页'
         }
     },
     {

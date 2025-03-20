@@ -16,7 +16,7 @@
 
                     <!-- 博客 LOGO 、博客名称 -->
                     <a href="/" class="flex items-center">
-                        <img :src="blogSettingsStore.blogSettings.logo" class="h-8 mr-3 rounded-full" alt="Weblog Logo" />
+                        <img :src="blogSettingsStore.blogSettings.logo" class="h-8 mr-3 rounded-full" alt="Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-400">{{
                             blogSettingsStore.blogSettings.name }}</span>
                     </a>
